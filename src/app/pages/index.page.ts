@@ -5,77 +5,6 @@ import { Component, signal } from '@angular/core';
   standalone: true,
   template: `
     <div class="flex flex-col min-h-screen ">
-      <nav class="flex items-center flex-wrap p-5">
-        <a
-          href="/"
-          class="font-bold mr-5 text-2xl inline-flex items-center uppercase"
-          >Mitesh</a
-        >
-        <div class="ml-auto">
-          <div class="relative inline-block">
-            <a
-              href="/blog/rss.xml"
-              target="_blank"
-              class="h-12 w-12 p-1 inline-flex items-center justify-center rounded-full focus:outline-none hover:text-gray-700 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-800"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-label="RSS Icon"
-                fill="currentColor"
-                stroke="none"
-                width="28"
-                height="28"
-                class="inline-block"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M3 3C12.9411 3 21 11.0589 21 21H18C18 12.7157 11.2843 6 3 6V3ZM3 10C9.07513 10 14 14.9249 14 21H11C11 16.5817 7.41828 13 3 13V10ZM3 17C5.20914 17 7 18.7909 7 21H3V17Z"
-                ></path>
-              </svg>
-            </a>
-          </div>
-          <div class="relative inline-block">
-            <button
-              id="button-dark-mode"
-              class="h-12 w-12 p-1 inline-flex items-center justify-center rounded-full focus:outline-none hover:text-gray-700 dark:hover:text-white focus:bg-gray-100 dark:focus:bg-gray-800"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-label="Sun Icon"
-                fill="currentColor"
-                stroke="none"
-                width="30"
-                height="30"
-                class="inline-block"
-                viewBox="0 0 20 20"
-                id="light-mode-icon"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                aria-label="Moon Icon"
-                fill="currentColor"
-                stroke="none"
-                width="30"
-                height="30"
-                class="inline-block"
-                viewBox="0 0 20 20"
-                id="dark-mode-icon"
-              >
-                <path
-                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </nav>
-
       <div class="flex flex-col flex-grow">
         <div class="p-5">
           <div class="max-w-3xl mx-auto text-center mt-10 py-10">
@@ -93,7 +22,6 @@ import { Component, signal } from '@angular/core';
             </div>
           </div>
         </div>
-
         <div
           class="m-5 flex-grow max-w-screen-lg lg:mx-auto lg:flex lg:flex-wrap"
         >
@@ -196,12 +124,6 @@ import { Component, signal } from '@angular/core';
           </div>
         </div>
       </div>
-
-      <footer class="px-5 py-10 mt-auto text-sm">
-        <div class="text-center">
-          <a href="/" class="font-semibold">Mitesh</a> © 2024
-        </div>
-      </footer>
     </div>
   `,
   styles: [],
