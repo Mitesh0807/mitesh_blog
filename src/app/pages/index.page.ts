@@ -1,8 +1,17 @@
+import { injectContentFiles } from '@analogjs/content';
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
+export interface PostAttributes {
+  title: string;
+  slug: string;
+  description: string;
+  coverImage: string;
+}
 
 @Component({
   selector: 'app-home',
   standalone: true,
+  imports: [CommonModule],
   template: `
     <div class="flex flex-col min-h-screen ">
       <div class="flex flex-col flex-grow">
@@ -22,11 +31,39 @@ import { Component, signal } from '@angular/core';
             </div>
           </div>
         </div>
+        @for (post of posts; track post.slug) {
+          <div
+            class="m-5 flex-grow max-w-screen-lg lg:mx-auto lg:flex lg:flex-wrap"
+          >
+            <div class="lg:pr-20 lg:w-2/3">
+              <div class="my-20">
+                <a href="/blog/" class="group focus:outline-none">
+                  <h2
+                    class="font-bold text-2xl lg:text-4xl lg:leading-snug group-hover:underline group-focus:underline"
+                  >
+                    Catching MongoDB E11000 duplicate key error in Node.js
+                  </h2>
+                  <p class="my-5 prose dark:prose-dark">
+                    Unique indexes are useful in MongoDB for preventing
+                    duplicate data. Here's how I catch the duplicate key error
+                    so I can send a human-readable response to let users know
+                    what the problem is.
+                  </p>
+                </a>
+                <p class="prose prose-sm dark:prose-dark">
+                  Written
+                  <span>by <a href="/blog/author/mitesh">Mitesh</a></span>
+                  <span>in <a href="/blog/node">Node.js</a></span> on August
+                  16th, 2024
+                </p>
+              </div>
+            </div>
+          </div>
+        }
         <div
           class="m-5 flex-grow max-w-screen-lg lg:mx-auto lg:flex lg:flex-wrap"
         >
           <div class="lg:pr-20 lg:w-2/3">
-            <!-- Repeat this block for each blog post -->
             <div class="my-20">
               <a
                 href="/blog/mongodb-duplicate-key-error"
@@ -51,7 +88,6 @@ import { Component, signal } from '@angular/core';
                 2024
               </p>
             </div>
-            <!-- Repeat this block for each blog post -->
           </div>
 
           <div class="w-full my-5 lg:order-last lg:mt-auto">
@@ -128,4 +164,8 @@ import { Component, signal } from '@angular/core';
   `,
   styles: [],
 })
-export default class HomeComponent {}
+export default class HomeComponent {
+  readonly posts = injectContentFiles<PostAttributes>((contentFile) =>
+    contentFile.filename.includes('/src/content/blog'),
+  );
+}
