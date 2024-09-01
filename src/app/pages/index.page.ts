@@ -37,8 +37,8 @@ export interface PostAttributes {
         <div
           class="m-5 flex-grow max-w-screen-lg lg:mx-auto lg:flex lg:flex-wrap"
         >
-          @for (post of posts; track post.slug) {
-            <div class="lg:pr-20 lg:w-2/3">
+          <div class="lg:pr-20 lg:w-2/3">
+            @for (post of posts; track post.slug) {
               <div class="my-20">
                 <a
                   [routerLink]="['/blog', 'posts', post.slug]"
@@ -77,9 +77,8 @@ export interface PostAttributes {
                   {{ post?.attributes?.date }}
                 </p>
               </div>
-            </div>
-          }
-          <div class="w-full my-5 lg:order-last lg:mt-auto">
+            }
+            <div class="w-full my-5 lg:order-last lg:mt-auto"></div>
             <div
               class="p-5 text-center font-medium text-gray-900 text-opacity-60 dark:text-gray-100 dark:text-opacity-60 w-full"
             >
