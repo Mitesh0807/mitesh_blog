@@ -6,6 +6,7 @@ coverImage: https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=r
 author: Mitesh
 authorInfo: Full Stack Developer
 date: Jun 28, 2023
+categories: 'Blog'
 ---
 
 # Git: A Developer's Best Friend for Version Control

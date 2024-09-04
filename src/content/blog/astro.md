@@ -1,13 +1,14 @@
 ---
-title: "My First Blog Post"
+title: 'My First Blog Post'
 pubDate: 2022-07-01
 slug: astro
-description: "This is the first post of my new Astro blog."
-author: "Astro Learner"
+description: 'This is the first post of my new Astro blog.'
+author: 'Astro Learner'
 coverImage: https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmVtYWxlJTIwcGljdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60
-tags: ["astro", "blogging", "learning in public"]
+tags: ['astro', 'blogging', 'learning in public']
 authorInfo: Full Stack Developer
 date: Jun 50, 2023
+categories: 'astro'
 ---
 
 # My First Blog Post
