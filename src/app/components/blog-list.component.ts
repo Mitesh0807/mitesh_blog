@@ -10,7 +10,7 @@ export interface PostAttributes {
   coverImage: string;
   author?: string;
   date?: string;
-  category?: string | string[];
+  categories?: string | string[];
 }
 
 @Component({

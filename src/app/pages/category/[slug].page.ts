@@ -10,7 +10,7 @@ export interface PostAttributes {
   slug: string;
   description: string;
   coverImage: string;
-  category: string[] | string;
+  categories: string[] | string;
 }
 
 @Component({
@@ -30,9 +30,10 @@ export default class CategoryPageListing {
   )
     .map((post) => post.attributes)
     .filter((item) => {
-      const category = item.category;
+      console.log('item');
+      const category = item.categories;
       if (Array.isArray(category)) {
-        return category.includes('desiredCategory');
+        return category.includes('');
       } else {
         return category === 'astro';
       }
