@@ -8,12 +8,15 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { provideFileRouter, requestContextInterceptor } from '@analogjs/router';
 import { provideContent, withMarkdownRenderer } from '@analogjs/content';
 import { withPrismHighlighter } from '@analogjs/content/prism-highlighter';
-import { withComponentInputBinding } from '@angular/router';
+import {
+  withComponentInputBinding,
+  withViewTransitions,
+} from '@angular/router';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideFileRouter(),
+    provideFileRouter(withViewTransitions()),
     provideHttpClient(
       withFetch(),
       withInterceptors([requestContextInterceptor]),

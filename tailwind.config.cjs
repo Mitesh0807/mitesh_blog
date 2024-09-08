@@ -14,7 +14,7 @@ module.exports = {
         },
       },
       animation: {
-        'blink-caret': 'blink-caret 0.75s step-end infinite',
+        'blink-caret': 'blink-caret 1.5s step-end infinite',
         typing: 'typing 3.5s steps(40, end) 1',
       },
     },

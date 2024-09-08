@@ -47,7 +47,7 @@ export interface PostAttributes {
                   class="group focus:outline-none"
                 >
                   <h2
-                    class="font-bold text-2xl lg:text-4xl lg:leading-snug group-hover:underline group-focus:underline"
+                    class="font-bold text-2xl lg:text-4xl lg:leading-snug group-hover:underline group-focus:underline title"
                   >
                     {{ post.title }}
                   </h2>

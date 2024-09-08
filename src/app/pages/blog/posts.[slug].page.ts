@@ -35,6 +35,12 @@ export interface PostAttributes {
           </svg>
           <span>Back to Blog Posts</span></a
         >
+
+        <h2
+          class="font-bold text-2xl lg:text-4xl lg:leading-snug group-hover:underline group-focus:underline title"
+        >
+          {{ post$?.attributes?.title }}
+        </h2>
         <analog-markdown
           class="markdown"
           [content]="post.content"
